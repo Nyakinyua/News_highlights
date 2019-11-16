@@ -9,9 +9,9 @@ def index():
     '''
     Root page function that returns the index page
     '''
-
+    title='Catch up on the latest news as and when they happen. keep i here for more information'
     message='whatever I write now can\t e blammed on me'
-    return render_template('index.html', title=message)
+    return render_template('index.html', message=message,title=title)
 
 
 @app.route('/source/<source_id>')
