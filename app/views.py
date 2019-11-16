@@ -9,6 +9,15 @@ def index():
     '''
     Root page function that returns the index page
     '''
-    return render_template('index.html')
+
+    message='whatever I write now can\t e blammed on me'
+    return render_template('index.html', title=message)
+
+
+@app.route('/source/<source_id>')
+def source(source_id):
+
+    return render_template('source.html',id=source_id)
+
 
 
