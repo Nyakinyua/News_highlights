@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% if title %}
-    <title>{{ title }}</title>
-    {% else %}
-    <title>Document</title>
-    {% endif %}
-</head>
-<body>
-    <h1>{{message}}</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% import 'macros.html' as macro%}
+
+    
+
+    <!-- News sources -->
+    <h3>Various News Sources</h3>
+    {% for various_sources in sources%}
+    <p>{{macro.display_sources(sources)}}</p>
+    
+    {% endfor %}
+
 
 
