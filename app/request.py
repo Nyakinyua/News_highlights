@@ -10,7 +10,7 @@ api_key = '6edb7b566bad48f689bcc51c050f1db7'
 
 #Getting the news base url
 base_url = "https://newsapi.org/v2/sources?q={}&apiKey={}"
-
+articles_base_url="https://newsapi.org/v2/everything?q={}&apikey={}"
 def get_sources(category):
     '''
     function that gets the json response to our url request
@@ -52,5 +52,21 @@ def process_results(source_list):
 
     return source_results   
 
+def get_news_articles(id):
+    '''
+    Function that gets json response of articles for a specific source
+    '''
+    get_news_url=articles_base_url.format(id,api_key)
+    with urllib.request.urlopen(get_news_articles) as url:
+        news_data=url.read()
+        news_response=json.loads(news_data)
+        news_results= None
 
+        if news_response['articles']:
+            news_results_list=news_response['results']
+            news_results=process_results(news_results_list)
+        return news_results
+
+
+def process_articles_results()
 
