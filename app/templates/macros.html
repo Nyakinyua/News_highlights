@@ -42,7 +42,7 @@
         </td>
         <td style="transform:translate(20%,20%)">
             <p>{{article.description}}</p>
-            <p>{{article.publishedAt}}</p>
+            <p>{{article.publishedAt|truncate(13)}}</p>
             <p>{{article.content}}</p>
             <a href="{{article.url}}"><button class="btn btn-info">View all</button></a>
         </td>
