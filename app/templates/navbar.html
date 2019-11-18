@@ -1,29 +1,36 @@
-<link rel="stylesheet" href="{{url_for('static',filename='CSS/navbar.css')}}">
-<header class="header-area overlay">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <link rel="stylesheet" href="{{url_for('static',filename='CSS/navbar.css')}}">
+  <header class="header-area overlay">
     <nav class="navbar navbar-expand-md navbar-dark" style="background-color: black;">
-    <div class="container">
-      <a href="#" class="navbar-brand">Urban Beats</a>
-      
-      <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
-        <span class="menu-icon-bar"></span>
-        <span class="menu-icon-bar"></span>
-        <span class="menu-icon-bar"></span>
-      </button>
-      
-      <div id="main-nav" class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li><a href="#us" class="nav-item nav-link">About Us</a></li>
-          <li class="dropdown">
-            <a href="#" class="nav-item nav-link" data-toggle="dropdown">Rooms</a>
-            <div class="dropdown-menu">
-              <a href="#card-section" class="dropdown-item">Studio Rooms</a>
-              <a href="#equipments" class="dropdown-item">Studio Equipments</a>
-            </div>
-          </li>
-          <li><a href="#dk-footer" class="nav-item nav-link">Contact</a></li>
-        </ul>
+      <div class="container">
+        <a href="#" class="navbar-brand">NEWS HIGHLIGHTS</a>
+
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+          <span class="menu-icon-bar"></span>
+          <span class="menu-icon-bar"></span>
+          <span class="menu-icon-bar"></span>
+        </button>
+
+        <div id="main-nav" class="collapse navbar-collapse">
+        
+              <a href="/" class="nav-item nav-link" data-toggle="dropdown">Home</a>
+           
+        </div>
       </div>
-    </div>
-  </nav>
-  
-</header> 
+    </nav>
+
+  </header>
+
+</body>
+
+</html>
