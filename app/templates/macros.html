@@ -1,3 +1,6 @@
+<!-- Displaying sources -->
+<div class="card">
+<div class="card-body">
 {% macro display_sources(source_list) %}
 
 {% for source in source_list %}
@@ -7,5 +10,24 @@
 <p>{{source.language}}</p>
 <p>{{source.country}}</p>
 <a class='btn btn-info' href="/articles/{{source.id}}">View Articles</a>
+{% endfor %}
+{% endmacro %}
+</div>
+</div>
+
+<!-- displaying articles -->
+
+{% macro display_source_articles(news_updates)%}
+{% for article in news_updates %}
+<h3>{{article.name}}</h3>
+<p>{{article.author}}</p>
+<p>{{article.title}}</p>
+<p>{{article.description}}</p>
+
+<img src="{{article.urlToImage}}">
+<p>{{article.publishedAt}}</p>
+<p>{{article.content}}</p>
+<a href="{{article.url}}"><button class="btn btn success">View all</button></a>
+
 {% endfor %}
 {% endmacro %}

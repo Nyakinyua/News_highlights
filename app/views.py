@@ -1,6 +1,6 @@
 from flask import render_template #import the render_template function from Flask
 from app import app #import the app instance from flask
-from .request import get_sources
+from .request import get_sources,get_news_articles
 
 
 #views 
@@ -15,16 +15,20 @@ def index():
     
 
     title='Catch up on the latest news as and when they happen. keep i here for more information'
-    message='whatever I write now can\t e blammed on me'
+   
 
   
-    return render_template('index.html', message=message,title=title, sources=various_sources)
+    return render_template('index.html',title=title, sources=various_sources)
 
 
-@app.route('/source/<source_id>')
-def source(source_id):
+@app.route('/articles/<id>')
+def source(id):
+    
+    source_articles=get_news_articles(id)
+    print(source_articles)
+    title="Articles"
 
-    return render_template('source.html',id=source_id)
+    return render_template('articles.html',title=title,id=id,articles=source_articles)
 
 
 
