@@ -1,39 +1,56 @@
 <!-- Displaying sources -->
 
-
-    {% macro display_sources(source_list) %}
+{% macro display_sources(source_list) %}
+<div class="container-fluid">
     <div class="row">
-    {% for source in source_list %}
-    <div class="col-md-4">
-    <div class="card">
-        <div class="card-body">
+        {% for source in source_list %}
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
 
-            <h3>{{source.name}}</h3>
-            <p>{{source.description}}</p>
-            <p>{{source.language}}</p>
-            <p>{{source.country}}</p>
-            <a class='btn btn-info' href="/articles/{{source.id}}">View Articles</a>
+                    <h3>{{source.name}}</h3>
+                    <p>{{source.description}}</p>
+                    <p>{{source.language}}</p>
+                    <p>{{source.country}}</p>
+                    <a class='btn btn-info' href="/articles/{{source.id}}">View Articles</a>
+                </div>
+            </div>
         </div>
+        {% endfor %}
+
+
     </div>
 </div>
-    {% endfor %}
-    {% endmacro %}
-
-</div>
-
+{% endmacro %}
 <!-- displaying articles -->
 
+
 {% macro display_source_articles(news_updates)%}
-{% for article in news_updates %}
-<h3>{{article.name}}</h3>
-<p>{{article.author}}</p>
-<p>{{article.title}}</p>
-<p>{{article.description}}</p>
+<div class="container">
+    <table>
+      
+        <!-- <div class="row"> -->
+        {% for article in news_updates %}
+        <tr>
+       <td>
 
-<img src="{{article.urlToImage}}">
-<p>{{article.publishedAt}}</p>
-<p>{{article.content}}</p>
-<a href="{{article.url}}"><button class="btn btn success">View all</button></a>
+            <h3>{{article.name}}</h3>
+            <!-- <p>{{article.author}}</p> -->
+            <p>{{article.title}}</p>
+            <img src="{{article.urlToImage}}" width="350px" height="240px">
 
-{% endfor %}
+        </td>
+        <td style="margin-left:20%;">
+            <p>{{article.description}}</p>
+            <p>{{article.publishedAt}}</p>
+            <p>{{article.content}}</p>
+            <a href="{{article.url}}"><button class="btn btn-info">View all</button></a>
+        </td>
+    </tr>
+        {% endfor %}
+    </div>
+
+    </table>
+
+
 {% endmacro %}
