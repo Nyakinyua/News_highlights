@@ -1,14 +1,13 @@
-News Highlight
+# News Highlight
 Author
-Raphael Katana
+[]
 
-Date of Release
-12 Nov 2018.
 
-Description
+
+## Description
 News Hightlight is an app that shows all the global news. And allows a user to do a custom check
 
-Prerequisites
+## Prerequisites
  Python3.6
  Virtual environment, run the followinng command to install python3.6 -m venv --without-pip venv
 How to run the app
@@ -30,5 +29,5 @@ Link to view the app (heroku)
 News Highlight
 
 License (MIT License)
-This project is licensed under the MIT Open Source license, (c) RKatana
+This project is licensed under the MIT Open Source license, (c) Nyakinyua
 
