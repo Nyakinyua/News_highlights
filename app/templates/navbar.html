@@ -1,13 +1,29 @@
-<div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-            <h4 class="text-white">Collapsed content</h4>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
-          </div>
-        </div>
-        <nav class="navbar navbar-light" style="background-color: #2886c9;">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </nav>
+<link rel="stylesheet" href="{{url_for('static',filename='CSS/index.css')}}">
+<header class="header-area overlay">
+    <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container">
+      <a href="#" class="navbar-brand">Urban Beats</a>
+      
+      <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+        <span class="menu-icon-bar"></span>
+        <span class="menu-icon-bar"></span>
+        <span class="menu-icon-bar"></span>
+      </button>
+      
+      <div id="main-nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li><a href="#us" class="nav-item nav-link">About Us</a></li>
+          <li class="dropdown">
+            <a href="#" class="nav-item nav-link" data-toggle="dropdown">Rooms</a>
+            <div class="dropdown-menu">
+              <a href="#card-section" class="dropdown-item">Studio Rooms</a>
+              <a href="#equipments" class="dropdown-item">Studio Equipments</a>
+            </div>
+          </li>
+          <li><a href="#dk-footer" class="nav-item nav-link">Contact</a></li>
+        </ul>
       </div>
+    </div>
+  </nav>
+  
+</header> 
