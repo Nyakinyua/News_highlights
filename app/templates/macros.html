@@ -1,20 +1,24 @@
 <!-- Displaying sources -->
-<div class="jumbotron">
+
+
+    {% macro display_sources(source_list) %}
+    <div class="row">
+    {% for source in source_list %}
+    <div class="col-md-4">
     <div class="card">
         <div class="card-body">
-            {% macro display_sources(source_list) %}
-
-            {% for source in source_list %}
 
             <h3>{{source.name}}</h3>
             <p>{{source.description}}</p>
             <p>{{source.language}}</p>
             <p>{{source.country}}</p>
             <a class='btn btn-info' href="/articles/{{source.id}}">View Articles</a>
-            {% endfor %}
-            {% endmacro %}
         </div>
     </div>
+</div>
+    {% endfor %}
+    {% endmacro %}
+
 </div>
 
 <!-- displaying articles -->
