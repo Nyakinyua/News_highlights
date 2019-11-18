@@ -1,10 +1,11 @@
-from flask import render_template #import the render_template function from Flask
-from app import app #import the app instance from flask
-from .request import get_sources,get_news_articles
+from flask import render_template,request,redirect,url_for #import the render_template function from Flask
+from . import main #import the app instance from flask
+from ..request import get_sources,get_news_articles
+ 
 
 
 #views 
-@app.route('/')
+@main.route('/')
 def index():
     '''
     Root page function that returns the index page
@@ -21,7 +22,7 @@ def index():
     return render_template('index.html',title=title, sources=various_sources)
 
 
-@app.route('/articles/<id>')
+@main.route('/articles/<id>')
 def source(id):
     
     source_articles=get_news_articles(id)
